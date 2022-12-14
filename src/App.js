@@ -1,17 +1,35 @@
 import './App.css';
-import LessText from './LessText';
-
+import React from 'react';
 
 
 function App() {
+
+  let friends = [
+    { id: 1, firstName: "Joe", lastName: "Jameson", age: 44 },
+    { id: 2, firstName: "Irina", lastName: "...", age: 22 },
+    { id: 3, firstName: "Samo", lastName: "Musaelyan", age: 25 }
+  ];
+
+  const elements = friends.map((friend) => {
+    return <div key={friend.title}>
+      <h3>{friend.firstName} {friend.lastName}</h3>
+      <p>Age: {friend.age}</p>
+    </div>;
+  })
+
   return (
-    <div className='App'>
-      <LessText
-        text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim iste obcaecati suntLorem, ipsum dolor sit amet consectetur adipisicing elit. Enim iste obcaecati suntLorem, ipsum dolor sit amet consectetur adipisicing elit. Enim iste obcaecati suntLorem, ipsum dolor sit amet consectetur adipisicing elit. Enim iste obcaecati suntLorem, ipsum dolor sit amet consectetur adipisicing elit. Enim iste obcaecati sunt a quis minima quos aliquam fuga impedit voluptate. Aliquid fugiat dolorum rerum perspiciatis sit dolore nam sint quisquam."
-        max={20}
-      />
+    <div>
+      {
+        friends.map((friend) => {
+          return <div>
+            <h3>{friend.firstName} {friend.lastName}</h3>
+            <p>Age: {friend.age}</p>
+          </div>;
+        })
+      }
     </div>
   )
+
 }
 
 export default App;
