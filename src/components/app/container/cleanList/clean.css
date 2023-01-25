@@ -1,0 +1,7 @@
+.clean_container {
+    width: 100%;
+    border: solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}

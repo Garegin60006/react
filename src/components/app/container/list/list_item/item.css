@@ -1,0 +1,8 @@
+.list_item {
+    border: solid 0.5px black;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 4px;
+}
